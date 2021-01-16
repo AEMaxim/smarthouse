@@ -1,0 +1,262 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>Документ без названия</title>
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+</head>
+
+
+    <body bgcolor="#E8E8E8">
+	
+	<br>
+<h1 align="left"><font style="font-family: 'Comfortaa'; text-decoration: underline; padding:50px; font-size: 50px"  >"Розумний Бойлер"</font></h1>
+  <nav>
+    <ul class="menu">
+      <li><a href="index.html">Домашня Сторінка</a></li>
+      <li><a href="house.html">Розумні прилади</a></li>
+      <li><a href="calculator.html" >Розраxунок Електроенергії</a></li>
+		<li><a href="calculator.html" >Повернутися</a></li>
+    </ul>
+  </nav>
+<style>
+	
+	@media (min-width: 1920px) {
+table {
+  font-size: 23px;
+	 }
+		}
+	body {
+  margin: 0;
+  padding: 0;
+        overflow-x: hidden;
+		
+		
+	}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav a {
+  display: block;
+  text-decoration: none;
+  outline: none;
+  transition: .4s ease-in-out;
+}
+.menu {
+  backface-visibility: hidden;
+  background: black;
+}
+.menu > li {
+  display: inline-block;
+  position: relative;
+}
+.menu > li > a {
+  font-family: 'Comfortaa';
+  height: 70px;
+  line-height: 70px;
+  padding: 0 60px;
+  font-weight: bold;
+  color: #FDF5E6;
+  font-size : 20px;
+
+}
+
+.menu > li > a:hover {
+		
+		 font-size : 21px;
+		transition: .4s ease-in-out;
+		color: #FFD700;
+	}	
+	
+@media (min-width: 1920px) {
+.menu > li > a {
+  font-size : 20px;
+  padding: 0 100px;
+  
+  }
+		}
+@media (min-width: 1920px) {
+.menu > li > a:hover  {
+  font-size : 30px;
+  padding: 0 100px;
+  
+  }
+		}
+
+
+
+    
+           
+        * {
+  box-sizing: border-box;
+}
+.eco, .circle {
+  position: absolute;
+  width: 200px;
+  height: 400px;
+    left: 60%;
+    top: 25%;
+    
+}
+.graph {
+  margin: 2rem;
+}
+.circle {
+}
+.box {
+  position: absolute;
+  transform-origin: 50% 50%;
+  transition: all 1.52s ease-in-out;
+}
+.box .item {
+  height: inherit;
+  border: 20px solid;
+  border-right: none;
+  cursor: pointer;
+  transition: all 0.27s ease-in-out;
+}
+.no {
+  top: 0px;
+  left: 0px;
+  width: 400px;
+  height: 400px;
+  transform: rotate(0deg);
+}
+.no .item {
+  width: 200px;
+  border-bottom-left-radius: 200px;
+  border-top-left-radius: 200px;
+  border-color: gold;
+}
+.no .item:hover {
+  border-color: #ffdf33;
+}
+.maybe {
+  top: 30px;
+  left: 30px;
+  width: 330px;
+  height: 340px;
+  transform: rotate(-170deg);
+}
+.maybe .item {
+  width: 170px;
+  border-bottom-left-radius: 170px;
+  border-top-left-radius: 170px;
+  border-color: orangered;
+}
+.maybe .item:hover {
+  border-color: #ff6a33;
+}
+.yes {
+  top: 60px;
+  left: 60px;
+  width: 280px;
+  height: 280px;
+  transform: rotate(-180deg);
+}
+.yes .item {
+  width: 140px;
+  border-bottom-left-radius: 140px;
+  border-top-left-radius: 140px;
+  border-color: darkturquoise;
+}
+.yes .item:hover {
+  border-color: #05fbff;
+}
+.ee {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.ee li {
+  position: absolute;
+  top: 0;
+  right: -40px;
+  font-family: sans-serif;
+}
+.ee li:nth-of-type(1) {
+  top: 0px;
+  color: gold;
+}
+.ee li:nth-of-type(2) {
+  top: 30px;
+  color: orangered;
+}
+.ee li:nth-of-type(3) {
+  top: 60px;
+  color: darkturquoise;
+}
+.no{
+	 animation-name: bar3;
+		    animation-duration: 3s;
+ 
+  transform: rotate(0deg);
+	
+}         
+ .maybe {
+	 animation-name: bar1;
+		    animation-duration: 3s;
+ 
+  transform: rotate(30deg);
+	
+} 
+.yes {
+	 animation-name: bar2;
+		    animation-duration: 4s;
+   transform: rotate(60deg);
+
+}
+	   	   @keyframes bar1 {
+  from {
+    transform: rotate(-170deg);
+  }
+
+  to {
+  transform: rotate(30deg);
+  }
+}	
+	   @keyframes bar2 {
+  from {
+    transform: rotate(-180deg);
+  }
+
+  to {
+ transform: rotate(60deg);
+  }
+}	
+        
+	   	   @keyframes bar3 {
+  from {
+    transform: rotate(-170deg);
+  }
+
+  to {
+  transform: rotate(0deg);
+  }
+}	
+	  
+</style>
+        <br>
+    <iframe width="650" height="365" src="https://www.youtube.com/embed/WqOinI5LKpw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div class="eco">
+  <div class="circle">
+    <div class="box no">
+      <div class="item"></div>
+    </div>
+    <div class="box maybe">
+      <div class="item"></div>
+    </div>
+    <div class="box yes">
+      <div class="item"></div>
+    </div>
+  </div>
+  <div class="ee">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+  </div>
+</div>
+    
+</body>
+</html>

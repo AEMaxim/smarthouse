@@ -1,0 +1,330 @@
+input[type=checkbox] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+  grid-area: 2;
+}
+label {
+  cursor: pointer;
+  width: 150px;
+  height: 270px;
+  background: grey;
+  display: block;
+  border-radius: 100px;
+  position: relative;
+  top: 28%; 
+}
+label:after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    width: 140px;
+    height: 140px;
+    background: #fff;
+    border-radius: 90px;
+    transition: 0.5s;
+}
+input:checked + label {
+  background: linear-gradient(35deg, #6f156c,#ecd20a);
+  
+}
+input:checked + label:after {
+    bottom: calc(100% - 5px);
+    transform: translateY(100%);
+}
+.bgi5, .bgi4{
+  flex-direction: column;
+}
+
+
+
+ .container1,  .container2  {
+    width: 225px;
+    height: 326px;
+    position: relative;
+}
+.container1 {
+  margin-left: 50px;
+}
+.container2 {
+  margin-right: 50px;
+}
+.cardi {
+    width: 220px;
+    height: 100%;
+    border-radius: 5px;
+    position: relative;
+    box-shadow: 0px 0px 3px #ddd;
+}
+.cardi .inneri {
+    background: #F9F9F9;
+    border: 1px solid #E3E3E3;
+    border-radius: 0px 0px 5px 5px;
+    width: 101%;
+    height: 155px;
+    position: absolute;
+    bottom: -1px;
+    left: -1px;
+    text-align: center;
+}
+.cardi .inneri .titlei {
+    display: block;
+    font-size: 25px;
+    color: #fff;
+    margin-top: -25px;
+    font-family: "Raleway", sans-serif;
+}
+.cardi .inneri .titlei .texti {
+  display: inline-block;
+  padding: 5px 15px;
+  border-radius: 50px;
+  font-weight: bold;
+}
+.cardi .inneri #cell, #cell2 {
+    color: #313A3E;
+    font-size: 70px;
+    display: block;
+    font-family: "Raleway", sans-serif;
+}
+.cardi .inneri .measurei {
+    color: #676767;
+    font-size: 25px;
+    display: block;
+    margin-top: -125px;
+    font-family: "Raleway", sans-serif;
+}
+
+.energyi {
+  background: #A6C659;
+  border: 1px solid #7DAD0A;   
+}
+.energyi .inneri {
+  border-top: 1px solid #7DAD0A;
+}
+.energyi .inneri .iconi {
+    width: 97px;
+    height: 97px;
+    position: absolute;
+    top: -145px;
+    left: 60px;
+    border: 5px dashed #fff;
+    border-radius: 65px;
+}
+.energyi .inneri .iconi:before {
+  content: '';
+  display: block;
+  border-right: 40px solid #fff;
+  border-top: 70px solid transparent;
+  transform: skew(-30deg,0);
+  position: absolute;
+  top: -15px;
+  right: 20px;
+  box-shadow: 5px -10px #A6C659;
+}
+.energyi .inneri .iconi:after {
+  content: '';
+  display: block;
+  border-right: 40px solid #fff;
+  border-bottom: 70px solid transparent;
+  transform: skew(-40deg,0);
+  position: absolute;
+  top: 40px;
+  right: 45px;
+  box-shadow: 5px 0 0px #A6C659;
+}
+.energyi .inneri .texti {
+  border: 1px solid #7DAD0A;
+  background: #A6C659;
+  text-shadow: 1px 1px 0px #7DAD0A;
+}
+.name {
+    margin: 140px 0px 50px 0px;
+    text-align: center;
+    font-size: 5vw;
+    color: #fff;
+    font-weight: 800;
+}
+.iframe {
+    height: 100vh;
+    width: 100vw;
+}
+iframe{
+    width: 100%;
+    height: 100%;
+        border: none;
+}
+
+.infowhite {
+    padding: 100px 80px 40px 80px;
+    display: block;
+    border-radius: 0;
+    margin: 0 auto;
+    width: 1200px;
+    font-size: inherit;
+}
+.infoimg{
+    margin-left: -50px;
+    width: 900px;
+  }
+.infowhite__btn {
+    display: flex;
+    margin-top: -80px;
+    align-items: center;
+    gap: 14px;
+}
+
+.card3 {
+    border:none;
+    width: 750px;
+}
+
+.card__content {
+  padding: 1rem;
+}
+
+.card__text {
+    font-family: 'Raleway';
+    font-size: 1.4em;
+    line-height: 1.45;
+    margin-bottom: 1.25rem;
+    color: #222;
+    font-weight: 400;
+    text-align: left;
+    margin: 0;
+}
+.card__text:first-letter {
+    font-size: 1.4em;
+    color: transparent;
+    background: linear-gradient(to bottom, #d200ca, #cdad00);
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+.advantages__side_back .card__text {
+    text-align: right;
+}
+
+.advantages {
+    height: 970px;
+    width: 1000px;
+    perspective: 2000px;
+    position: relative;
+    margin: 0 auto;
+}
+ .advantages__side {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    transition: all .7s cubic-bezier(1, -0.21, 0, 0.19);
+    backface-visibility: hidden;
+}
+ .advantages__side_back {
+   transform: rotateY(-180deg);
+}
+ .advantages.flip .advantages__side_front {
+   transform: rotateY(180deg);
+}
+ .advantages.flip .advantages__side_back {
+   transform: rotateY(0);
+}
+
+.container2 + .card3 {
+    border: 8px solid #ad27a8;
+}                
+
+.jump{
+    animation: .6s infinite alternate cubic-bezier(0.71, 0.01, 1, 0.99);
+    animation-name: jump;
+    transform: translateY(-60px);
+    margin-bottom: 70px;
+  }
+  @keyframes jump {
+   from {
+    transform: translateY(-60px);
+  }
+  to {
+    transform: translateY(75px);
+  }
+}
+strong {
+    font-size: 1.3em;
+}
+.eie{
+  display: flex;
+  justify-content: center;
+  margin-top: 30px
+}
+.eei{
+  width: 570px;
+
+}
+@media screen and (max-width: 1366px) {
+  .jump {
+    width: 170px;
+  }
+}
+
+@media screen and (max-width: 988px) {
+.infowhite {
+    display: block;
+    width: 100vw;
+    padding: 100px 0 0 0;
+    height: 455vw;
+}
+.card__text + ul {
+    font-size: 0.75em;
+}
+.infowhite__btn {
+    flex-direction: column;
+    justify-content: center;
+    gap: 0;
+    margin-bottom: -40px;
+}
+.advantages {
+    width: 100vw;
+}
+.advantages__side {
+    height: auto;
+    width: 100vw;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+  .card__text {
+    font-size: 14px;
+  }
+  .card3 {
+    width: 100vw;
+  }
+  .container1, .container2 {
+    margin: 0;
+  }
+  label {
+    width: 100px;
+    height: 210px;
+    transform: rotate(90deg);
+  }
+  label:after {
+    width: 90px;
+    height: 90px;
+  }
+  .infoimg {
+    margin-left: 0;
+    margin-bottom: -40px;
+    width: 350px;
+  }
+  .jump {
+    width: 150px;
+  }
+  .name {
+    font-size: 8.8vw;
+  }
+  .eei {
+    width: 360px;
+  }
+  .eie {
+    margin-top: 100px;
+  }
+}
