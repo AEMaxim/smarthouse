@@ -1,0 +1,177 @@
+.info {
+    max-width: 1920px;
+}
+.bgi1 .info {
+    margin-top: 5%;
+}
+ .info__elem {
+    border: 10px dashed #fde428;
+    width: 71%;
+    margin: 0 auto;
+    font-size: 3.3em!important;
+    animation-duration: 1.5s;
+}
+        @keyframes left {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0)
+    }
+}
+        @keyframes right {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0)
+    }
+}
+ .info__item  {
+    margin: 0;
+    color: #fff;
+    
+}
+ .info__item_ba1, .info__item_ba3, .info__item_ba5  {
+    text-align: left;
+}
+ .info__item_ba2, .info__item_ba4  {
+    text-align: right;
+}
+ .info__item::before, .info__item::after{
+   content: "";
+   display: block;
+   width: 10px;
+   margin:auto;
+   height: 100px;
+   position:relative;
+}
+
+
+.info__elem_ba1{border-image: linear-gradient(to right, transparent 49.6%, #d13d3d 49.6%) 1;animation-name: left;}
+.info__elem_ba2{border-image: linear-gradient(to left, transparent 49.6%, #e8c93f 49.6%) 1;animation-name: right;}
+.info__elem_ba3{border-image: linear-gradient(to right, transparent 49.6%, #55b543 49.6%) 1;animation-name: left;}
+.info__elem_ba4{border-image: linear-gradient(to left, transparent 49.6%, #4378b5 49.6%) 1;animation-name: right;}
+.info__elem_ba5{border-image: linear-gradient(to right, transparent 49.6%, #8d3bad 49.6%) 1;animation-name: left;}
+.info__item_ba1::before, .info__item_ba1::after{   background: #d13d3d;}
+.info__item_ba2::before, .info__item_ba2::after{   background: #e8c93f;}
+.info__item_ba3::before, .info__item_ba3::after{   background: #55b543;}
+.info__item_ba4::before, .info__item_ba4::after{   background: #4378b5;}
+.info__item_ba5::before, .info__item_ba5::after{   background: #8d3bad;}
+.regular-house-text{ 
+    width: 30%;
+    border-right: 6px solid #777777;
+    padding-right: 20px;
+}
+.smart-house-text{ 
+    width: 30%;
+    border-left: 6px solid #777777;
+    padding-left: 20px;
+    margin-left: -200px;
+}
+.button-buy{
+    border-radius: 5px;
+    background: linear-gradient(to right, #b31ead, #d1c206, #b31ead, #d1c206);
+    padding: 30px 50px;
+    margin: 20px -40px 20px 0px;
+    font-size: 3em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background-size: 300% 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: all .6s ease-in-out;
+    line-height: 1.1;
+}
+.button-buy:hover {
+    transition: 0.3s;
+    box-shadow: none;
+    transform: translateY(-7px);
+    background-position: 98% 0;
+    transition: all .6s ease-in-out;
+}
+.regular-house-text{ 
+    width: 30%;
+    border-right: 6px solid #777777;
+    padding-right: 20px;
+}
+.infotext{
+  margin-right: 100px;
+}
+strong {
+    font-size: 1.5em;
+}
+h2 {
+    letter-spacing: 7px;
+    text-transform: uppercase;
+    font-size: 3.3em;
+    margin: 0px;
+    text-align: center;
+    margin: 0 0 -10px;
+}
+.infotext h2 {
+    font-size: 2.6em;
+}
+@media screen and (max-width: 1366px) {
+  .bgi1 .info {
+    margin-top: 7.5%;
+  }
+  .smart-house-text {
+    margin-left: 70px;
+  }
+  .info__elem {
+    font-size: 2.2em!important;
+  } 
+  .infotext {
+    margin-right: 0px;
+  }
+  .button-buy{
+    width: 100%;
+    height: 100%;
+  }
+    h2 {
+    text-align: right;
+    font-size: 2.4em;
+      }
+}
+@media screen and (max-width: 988px) {
+.bgi1 .info {
+    margin-top: 25%;
+}
+.regular-house-text {
+    width: 100%;
+    border-right: none; 
+    padding-right: 0px; 
+}
+.smart-house-text {
+    width: 100%;
+    margin-left: 0px;
+}
+.info__elem {
+    font-size: 1.65em!important;
+    width: 90%;
+}
+.info__item::before, .info__item::after{
+   height: 30px;
+}
+ .info__item_ba1, .info__item_ba3, .info__item_ba5  {
+    margin-left: 7px;
+}
+ .info__item_ba2, .info__item_ba4  {
+   margin-left: -7px;
+}
+}
+@media screen and (max-height: 670px) {
+.info__elem {
+    font-size: 1.4em!important;
+}
+.bgi1 .info {
+    margin-top: 34%;
+}
+}

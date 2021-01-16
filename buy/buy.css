@@ -1,0 +1,77 @@
+body {
+    margin: 0;
+    background: url(1.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.button {
+    width: 260px;
+    border-radius: 5px;
+    background: linear-gradient(to right, #888, #888, #b31ead, #d1c206);
+    background-size: 300% 100%;
+    padding: 1.5vw 2.5vw;
+    font-size: 3em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: all .6s ease-in-out;
+    line-height: 1.1;
+    color: #fff;
+}
+.button:hover {
+    background-position: 100% 0;
+    transition: all .4s ease-in-out;
+}
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: all .6s ease-in-out;
+    font-size: 0.75em;
+    font-family: "Raleway";
+    font-weight: 800;
+}
+.button span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.button:hover span {
+  padding-right: 25px;
+}
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+} 
+.buy {
+    min-height: 65vh;
+}
+.buy__title {
+    text-align: center;
+    margin-top: 37vh;
+    font-size: 4.6vw;
+}
+.buy__buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: -40px 110px 0 110px;
+    row-gap: 25px;
+    column-gap: 50px;
+}
+@media screen and (max-width: 988px) {
+  .buy__buttons{
+    margin: 30px 70px 70px;
+  }
+  .buy__title {
+    font-size: 5.6vw;
+  }
+}

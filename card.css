@@ -1,0 +1,191 @@
+@keyframes top {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0)
+    }
+}
+.cards-system {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px;
+    gap: 25px;
+    justify-content: center
+}
+.card {
+    background-color: white;
+    border-radius: 0.5em;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    animation-duration: 1.5s;
+    animation-name: top;
+    max-width: 500px;
+}
+.card:hover .card__image {
+    filter: contrast(124.46%);
+}
+.card__content {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5em;
+    flex: auto;
+}
+.card__image {
+    background-position: center;
+    padding-top: 16%;
+    background-size: cover;
+    filter: contrast(50%);
+    position: relative;
+    transition: filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91);
+}
+.card__image::before {
+    content: "";
+    display: block;
+    padding-top: 56.25%;
+}
+
+.card__image--1 {
+    background-image: url(1.jpg);
+}
+.card__image--2 {
+    background-image: url(2.jpg);
+}
+.card__image--3 {
+    background-image: url(3.jpg);
+}
+.card__image--4 {
+    background-image: url(4.jpg);
+}
+.card__image--5 {
+    background-image: url(5.jpg);
+}
+.card__image--6 {
+    background-image: url(6.jpg);
+}
+.card__image--7 {
+    background-image: url(1-.png);
+}
+.card__image--8 {
+    background-image: url(6.png);
+}
+.card__image--9 {
+    background-image: url(3.png);
+}
+.card__image--10 {
+    background-image: url(4.png);
+}
+.card__image--11 {
+    background-image: url(81.jpg);
+}
+.card__image--12 {
+    background-image: url(0.jpg);
+}
+.card__image--13 {
+    background-image: url(13.png);
+}
+.card__image--14 {
+    background-image: url(8.jpg);
+}
+.card__image--15 {
+    background-image: url(111.jpg);
+}
+.card__title {
+    font-size: 2em;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+.card__text {
+    flex: auto;
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    font-family: 'Comfortaa';
+    text-align: left;
+}
+.card-button {
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-color: #e1e1e1;
+    border: none;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    background: linear-gradient(to right, #eaeaea, #eaeaea, #b31ead, #d1c206);
+    background-size: 300% 100%;
+    color: #000;
+    transition: all .6s ease-in-out;
+    border-radius: 5px 17px;
+}
+.card-button:hover {
+    transform: translateY(-7px);
+    background-position: 98% 0;
+    transition: all .6s ease-in-out;
+    color: #fff;
+}
+.general{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 80px 30px 20px;
+    max-width: 1920px;
+}
+
+.general__name{
+    font-size: 7.4em;
+    color: #fff;
+    font-weight: 800;
+    margin: 0;
+}
+.general__text {
+    padding-left: 100px;
+    margin: 0;
+    color: #fff;
+    text-align: right;
+    font-size: 2.4em;
+}
+h3 {
+  letter-spacing: 3.5px;
+  font-size: 1.8em;
+  margin:  0px;
+  text-align:center;
+}
+.bbca{
+    display: flex; gap: 16px; margin-left: -3px;
+}
+@media screen and (max-width: 1366px) {
+  .general__name{
+    font-size: 5.5em;
+    }
+  .general__text {
+    font-size: 1.6em;
+    }
+  .cards-system, .cards-gadget {
+    padding: 20px;
+    }
+  .card {
+    max-width: 400px;
+    }
+}
+@media screen and (max-width: 988px) {
+  .general__text {
+    font-size: 1.4em;
+    padding-left: 0;
+    text-align: justify;
+    }
+  .general__name {
+    font-size: 3em;
+    margin: 80px 0 0;
+    }
+    h3 {
+    text-align: left;
+    font-size: 1.3em!important;
+    }
+    .card-button {
+    font-size: 14px;
+}
+}
