@@ -11,6 +11,37 @@
         <script>
         new WOW({offset:300}).init();
     </script>
+        <script src="gmaps.min.js"></script>
+    <style>#map {
+    width: 1060px;
+    height: 400px;
+    margin: 0 auto;
+    margin-top: -175px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.infocalc {
+    height: 1815px;
+}
+.no {
+    text-align: center;
+    font-size: 3em;
+    margin: 0;
+    font-size: 2.6em;
+    color: transparent;
+    background: linear-gradient(to right, #8e0088, #afa41d);
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+@media screen and (max-width: 988px){
+#map {
+    width: 340px;
+    margin-top: 5px;
+}
+}
+
+</style>
 </head>
 <body>
 <nav>
@@ -67,13 +98,13 @@
         <div class="line line12 ano"></div>
 
         <div class="notescont"> 
-         <span class="notes3">Жовтень</span>
-        <span class="notes4">Листопад</span>
-        <span class="notes5">Грудень</span>
-        <span class="notes6">Січень</span>
-        <span class="notes7">Лютий</span>
-        <span class="notes8">Березень</span>
-        <span class="notes9">Квітень</span>
+         <span class="notes3">Октябрь</span>
+        <span class="notes4">Ноябрь</span>
+        <span class="notes5">Декабрь</span>
+        <span class="notes6">Январь</span>
+        <span class="notes7">Февраль</span>
+        <span class="notes8">Март</span>
+        <span class="notes9">Апрель</span>
     </div></div>
     <div class="eco__legend">
       <span class="eco_usual">«Звичайний» будинок</span>
@@ -87,7 +118,7 @@
     <div id="calculator"><input type="text" id="display" placeholder="(1.68 грн) * (300кВт•год)">
  <input id="btnEqual" type="button" name="equal" value="=" onclick="answer()">    </div>
     <p class="calc__info">Не знаєте ціни електроенергії? Не біда!</p>
-<iframe title="novacom" src="https://www.novakom.com.ua/tarifs.html" width="550" height="620" style="
+<iframe src="https://www.novakom.com.ua/tarifs.html" width="550" height="620" style="
     margin-top: 25px; float: left;"></iframe>
 <img src="novacom.png" class="calc__img-2" alt="Дізнатися про тарифи ви можете на сайті «Новаком». Також ви можете">
     
@@ -98,6 +129,7 @@
 <a href="https://www.novakom.com.ua/about/" class="button" style="grid-area: b4;">До інформації</a>
 <a href="https://www.novakom.com.ua/about/" class="button" style="grid-area: b5;">До публікацій</a>
 </div>
+   <div id="map"><div class="no">Будь ласка, увімкніть геолокацію!</div></div>
     </div>
   </div>
   <div class="infocalc__2">
@@ -132,21 +164,21 @@
           </ul>
       </div>
       <div class="footer__ul">
-        <h4 class="footer__im">Розумні прилади</h4>
+        <h4>Розумні прилади</h4>
           <ul>
-            <li><a href="доп/1920/s.html">«Смарт-захист» та замки</a></li>   
-            <li><a href="доп/1920/c.html">«Розумні» відеокамери</a></li>  
-            <li><a href="доп/1920/t.html">«Розумний» Клімат-контроль</a></li>  
-            <li><a href="доп/1920/l.html">«Розумне освітлення»</a></li>
-            <li><a href="доп/1920/ms.html">«Розумне» водопостачання</a></li>
-            <li><a href="доп/1920/hw.html">«Розумні» розетки</a></li>
-            <li><a href="доп/1920/h.html">«Розумні» датчики</a></li>
-            <li><a href="доп/1920/ss.html">Ґаджети для кімнати</a></li>
-            <li><a href="доп/1920/plug.html">Хаб-контролер</a></li>
+            <li><a href="/home/доп/1920/s.html">«Смарт-захист» та замки</a></li>   
+            <li><a href="/home/доп/1920/c.html">«Розумні» відеокамери</a></li>  
+            <li><a href="/home/доп/1920/t.html">«Розумний» Клімат-контроль</a></li>  
+            <li><a href="/home/доп/1920/l.html">«Розумне освітлення»</a></li>
+            <li><a href="/home/доп/1920/ms.html">«Розумне» водопостачання</a></li>
+            <li><a href="/home/доп/1920/hw.html">«Розумні» розетки</a></li>
+            <li><a href="/home/доп/1920/h.html">«Розумні» датчики</a></li>
+            <li><a href="/home/доп/1920/ss.html">Ґаджети для кімнати</a></li>
+            <li><a href="/home/доп/1920/plug.html">Хаб-контролер</a></li>
           </ul>
       </div>
       <div class="footer__ul">
-        <h4 class="footer__im">Замовлення</h4>
+        <h4>Замовлення</h4>
           <ul>
             <li><a href="house.html">Замовити Розумний Дім</a></li>  
             <li><a href="house.html#system">Замовити Розумні прилади</a></li>  
@@ -171,7 +203,27 @@
 }
   else setTimeout(anim, 500);
 })();
+
+
+navigator.geolocation.getCurrentPosition(function(position) {
+      var lat = position.coords.latitude;
+      var lng = position.coords.longitude;
+      var map = new GMaps({
+        el: '#map',
+        lat: lat,
+        lng: lng
+      });
+      map.addMarker({
+        lat: lat,
+        lng: lng
+      });
+
+});
   </script>
   <script src="menu.js"></script>
+      <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIwzALxUPNbatRBj3Xi1Uhp0fFzwWNBkE&callback=initMap&libraries=&v=weekly"
+      async
+    ></script>
 </body>
 </html>
