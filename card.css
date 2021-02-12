@@ -100,10 +100,10 @@
 }
 .card__text {
     flex: auto;
-    font-size: 1.2em;
+    font-size: 1.165em;
     line-height: 1.5;
     margin-bottom: 20px;
-    font-family: 'Comfortaa';
+    font-family: 'Roboto', sans-serif;
     text-align: left;
 }
 .card-button {
@@ -159,7 +159,7 @@ h3 {
 }
 @media screen and (max-width: 1366px) {
   .general__name{
-    font-size: 5.5em;
+    font-size: 5.1em;
     }
   .general__text {
     font-size: 1.6em;
@@ -172,11 +172,13 @@ h3 {
     }
 }
 @media screen and (max-width: 988px) {
-  .general__text {
+.general__text {
     font-size: 1.4em;
-    padding-left: 0;
+    padding: 0;
     text-align: justify;
-    }
+    margin: 0;
+    border-left: none;
+}
   .general__name {
     font-size: 3em;
     margin: 80px 0 0;
