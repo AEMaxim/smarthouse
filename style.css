@@ -144,7 +144,7 @@ footer {
     align-items: flex-start;
     margin: 10px;
 }
-h4{
+.footer__im{
     margin: 0;
     font-size: 2.6em;
     color: transparent;
@@ -208,7 +208,7 @@ h4{
   }
 }
 .infowhite {
-    color: #777;
+    color: #666;
     background-color: white;
     text-align: center;
     padding: 35px 170px;
