@@ -11,6 +11,8 @@
         <script>
         new WOW({offset:300}).init();
     </script>
+    <style>.vi{display: block;}
+.hi{display: none;}</style>
 </head>
 <body>
 <nav>
@@ -87,16 +89,30 @@
     <div id="calculator"><input type="text" id="display" placeholder="(1.68 грн) * (300кВт•год)">
  <input id="btnEqual" type="button" name="equal" value="=" onclick="answer()">    </div>
     <p class="calc__info">Не знаєте ціни електроенергії? Не біда!</p>
-<iframe title="novacom" src="https://www.novakom.com.ua/tarifs.html" width="550" height="620" style="
+
+<iframe class="ifr1 vi" src="https://www.novakom.com.ua/tarifs.html" width="550" height="620" style="
     margin-top: 25px; float: left;"></iframe>
+
+    <iframe  class="ifr2 hi" src="https://www.novakom.com.ua/" width="550" height="620" style="
+    margin-top: 25px; float: left;"></iframe>
+
+    <iframe  class="ifr3 hi" src="https://www.novakom.com.ua/entrepreneurs.html" width="550" height="620" style="
+    margin-top: 25px; float: left;"></iframe>
+
+    <iframe  class="ifr4 hi" src="https://dovidka.novakom.com.ua/" width="550" height="620" style="
+    margin-top: 25px; float: left;"></iframe>
+
+    <iframe  class="ifr5 hi" src="https://www.novakom.com.ua/about/" width="550" height="620" style="
+    margin-top: 25px; float: left;"></iframe>
+
 <img src="novacom.png" class="calc__img-2" alt="Дізнатися про тарифи ви можете на сайті «Новаком». Також ви можете">
     
     <div id="buttons">
-<a href="https://www.novakom.com.ua" class="button marl" style="grid-area: b1;">До головної</a>
-<a href="https://www.novakom.com.ua/abonent.html" class="button marl" style="grid-area: b2;">До кабінену абонента</a>
-<a href="https://www.novakom.com.ua/entrepreneurs.html" class="button" style="grid-area: b3;">До сторінки підприємців</a>
-<a href="https://www.novakom.com.ua/about/" class="button" style="grid-area: b4;">До інформації</a>
-<a href="https://www.novakom.com.ua/about/" class="button" style="grid-area: b5;">До публікацій</a>
+<a onclick="vihi1()"  class="button marl" style="grid-area: b1;">До головної</a>
+<a onclick="vihi2()"  class="button marl" style="grid-area: b2;">До кабінену абонента</a>
+<a onclick="vihi3()"  class="button" style="grid-area: b3;">До е-черги</a>
+<a onclick="vihi4()"  class="button" style="grid-area: b4;">До інформації</a>
+<a onclick="vihi5()"  class="button" style="grid-area: b5;">До тарифів</a>
 </div>
     </div>
   </div>
@@ -171,6 +187,74 @@
 }
   else setTimeout(anim, 500);
 })();
+
+    function vihi1(){
+  document.querySelector('.ifr1').classList.remove('vi');
+    document.querySelector('.ifr3').classList.remove('vi');
+      document.querySelector('.ifr4').classList.remove('vi');
+        document.querySelector('.ifr5').classList.remove('vi');
+   document.querySelector('.ifr1').classList.add('hi');
+      document.querySelector('.ifr3').classList.add('hi');
+         document.querySelector('.ifr4').classList.add('hi');
+            document.querySelector('.ifr5').classList.add('hi');
+  document.querySelector('.ifr2').classList.remove('hi');
+    document.querySelector('.ifr2').classList.add('vi');
+    };
+
+
+
+    function vihi2(){
+  document.querySelector('.ifr1').classList.remove('vi');
+    document.querySelector('.ifr2').classList.remove('vi');
+      document.querySelector('.ifr4').classList.remove('vi');
+        document.querySelector('.ifr5').classList.remove('vi');
+   document.querySelector('.ifr1').classList.add('hi');
+      document.querySelector('.ifr2').classList.add('hi');
+         document.querySelector('.ifr4').classList.add('hi');
+            document.querySelector('.ifr5').classList.add('hi');
+  document.querySelector('.ifr3').classList.remove('hi');
+    document.querySelector('.ifr3').classList.add('vi');
+        };
+
+    function vihi3(){
+  document.querySelector('.ifr1').classList.remove('vi');
+    document.querySelector('.ifr3').classList.remove('vi');
+      document.querySelector('.ifr2').classList.remove('vi');
+        document.querySelector('.ifr5').classList.remove('vi');
+   document.querySelector('.ifr1').classList.add('hi');
+      document.querySelector('.ifr3').classList.add('hi');
+         document.querySelector('.ifr2').classList.add('hi');
+            document.querySelector('.ifr5').classList.add('hi');
+  document.querySelector('.ifr4').classList.remove('hi');
+    document.querySelector('.ifr4').classList.add('vi');
+    };
+
+    function vihi4(){
+  document.querySelector('.ifr1').classList.remove('vi');
+    document.querySelector('.ifr3').classList.remove('vi');
+      document.querySelector('.ifr4').classList.remove('vi');
+        document.querySelector('.ifr2').classList.remove('vi');
+   document.querySelector('.ifr1').classList.add('hi');
+      document.querySelector('.ifr3').classList.add('hi');
+         document.querySelector('.ifr4').classList.add('hi');
+            document.querySelector('.ifr2').classList.add('hi');
+  document.querySelector('.ifr5').classList.remove('hi');
+    document.querySelector('.ifr5').classList.add('vi');
+    };
+
+    function vihi5(){
+  document.querySelector('.ifr2').classList.remove('vi');
+    document.querySelector('.ifr3').classList.remove('vi');
+      document.querySelector('.ifr4').classList.remove('vi');
+        document.querySelector('.ifr5').classList.remove('vi');
+   document.querySelector('.ifr2').classList.add('hi');
+      document.querySelector('.ifr3').classList.add('hi');
+         document.querySelector('.ifr4').classList.add('hi');
+            document.querySelector('.ifr5').classList.add('hi');
+  document.querySelector('.ifr1').classList.remove('hi');
+    document.querySelector('.ifr1').classList.add('vi');
+    };
+
   </script>
   <script src="menu.js"></script>
 </body>
